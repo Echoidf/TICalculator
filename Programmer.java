@@ -22,10 +22,10 @@ public interface Programmer {
     void OFF();// 关机
     void ONorC();// 开机，开机时按下为全部清空数据
     void SUM();// 求和
-    void lparenttheis();// 左括号
-    void rparenthesis();// 右括号
+    void lParenthesis();// 左括号
+    void rParenthesis();// 右括号
     void SHF();// 移位
-    void inverCode();// 反码
+    void inverseCode();// 反码
     void twoC();// 补码
     void OR();// 或
     void AND();// 与
@@ -34,6 +34,6 @@ public interface Programmer {
     void division();// "/"
     void multiply();// "*"
     void plus();// "+"
-    void substration();// "-"
+    void subtraction();// "-"
     void getAnswer();// "="
 }
