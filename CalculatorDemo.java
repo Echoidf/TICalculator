@@ -4,11 +4,16 @@ import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+=======
+import javax.swing.border.EmptyBorder;
+import java.awt.*;
+>>>>>>> main
 
 /**
  * @author 左齐亮
  * @version 1.0
  */
+<<<<<<< HEAD
 public class CalculatorDemo  implements ActionListener {
     private JFrame jFrame;
     private JPanel contentPanel;//内容面板
@@ -19,12 +24,25 @@ public class CalculatorDemo  implements ActionListener {
 
     public CalculatorDemo() {
         jFrame = new JFrame();
+=======
+public class CalculatorDemo extends JFrame {
+    private JPanel contentPanel;//内容面板
+    private JTextField textField;//文本框
+    private JButton[] btns = new JButton[40];
+
+
+    public CalculatorDemo() {
+        setTitle("TI 程序员计算器");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setBounds(200, 100, 450, 600);
+>>>>>>> main
         contentPanel = new JPanel();
         //设置面板的边框
         contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
         //设置为边框布局管理器
         contentPanel.setLayout(new BorderLayout(0, 0));
         //应用内容面板
+<<<<<<< HEAD
         jFrame.setContentPane(contentPanel);
         JPanel jPanel = new JPanel();//用于保存文本框
         textFieldIn = new JTextField();
@@ -33,6 +51,15 @@ public class CalculatorDemo  implements ActionListener {
         jPanel.add(textFieldOut);
         contentPanel.add(jPanel, BorderLayout.NORTH);//将面板放在北部
 
+=======
+        setContentPane(contentPanel);
+        JPanel jPanel = new JPanel();//用于保存文本框
+        textField = new JTextField();
+        textField.setHorizontalAlignment(SwingConstants.LEFT);//文本框使用右对齐
+        jPanel.add(textField);
+        textField.setColumns(22);//设置文本框有18列
+        contentPanel.add(jPanel, BorderLayout.NORTH);//将面板放在北部
+>>>>>>> main
         JPanel panel2 = new JPanel();    //新建面板用于保存按钮
         contentPanel.add(panel2, BorderLayout.CENTER);    //将面板放置在边界布局的中央
         panel2.setLayout(new GridLayout(8, 5, 5, 5));    //面板使用网格8x5布局
@@ -117,6 +144,7 @@ public class CalculatorDemo  implements ActionListener {
         btns[39] = new JButton("=");
         panel2.add(btns[39]);
 
+<<<<<<< HEAD
 
     }
     public JPanel getContentPanel() {
@@ -171,11 +199,23 @@ public class CalculatorDemo  implements ActionListener {
     }
     @Override
     public void actionPerformed(ActionEvent e) {
+=======
+        for (int i = 0; i < 40; i++) {
+            btns[i].setBackground(Color.BLACK);
+            btns[i].setForeground(Color.WHITE);
+        }
+>>>>>>> main
 
     }
 
     public static void main(String[] args) {
+<<<<<<< HEAD
         CalculatorDemo calculatorDemo = new CalculatorDemo();
         calculatorDemo.display();
+=======
+        CalculatorDemo jFrame = new CalculatorDemo();
+        jFrame.setVisible(true);
+        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+>>>>>>> main
     }
 }
